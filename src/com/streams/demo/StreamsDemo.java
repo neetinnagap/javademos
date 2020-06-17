@@ -16,10 +16,7 @@ public class StreamsDemo {
         add(new Shape(2, 5, "green"));
         add(new Shape(7, 6, "blue"));
     }};
-
-    static {
-
-    }
+    
     /**
      * A regular and most common min calculation
      */
