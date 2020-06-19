@@ -22,4 +22,13 @@ public class Shape {
     public String getColor() {
         return color;
     }
+
+    @Override
+    public String toString() {
+        return "Shape{" +
+                "weight=" + weight +
+                ", vertices=" + vertices +
+                ", color='" + color + '\'' +
+                '}';
+    }
 }

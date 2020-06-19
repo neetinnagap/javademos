@@ -1,6 +1,7 @@
 package com.streams.demo;
 
 import java.util.*;
+import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 public class StreamsDemo {
@@ -71,13 +72,29 @@ public class StreamsDemo {
         System.out.println("Are all shapes valid? (vertices > 2) : " + shapes.stream().allMatch((shape) -> shape.getVertices() > 2));
     }
 
+    private void collectedStreams() {
+        shapes.stream()
+                .filter((shape) -> shape.getVertices() > 2)
+                .collect(Collectors.toList())
+                .forEach(System.out::println);
+    }
+
+    private void collectedSortedStreams() {
+        shapes.stream()
+                .sorted(Comparator.comparingInt(Shape::getVertices).reversed())
+                .map(Shape::getVertices)
+                .forEach(System.out::println);
+    }
+
     public static void main(String[] args) {
         StreamsDemo demo = new StreamsDemo();
-        demo.regularMinDemo();
-        demo.streamsMinDemo();
-        demo.streamsMinDemoOptimized();
-        demo.regularMin3Demo();
-        demo.streamsMin3Demo();
-        demo.streamsWitObjects();
+//        demo.regularMinDemo();
+//        demo.streamsMinDemo();
+//        demo.streamsMinDemoOptimized();
+//        demo.regularMin3Demo();
+//        demo.streamsMin3Demo();
+//        demo.streamsWitObjects();
+        demo.collectedStreams();
+        demo.collectedSortedStreams();
     }
 }
