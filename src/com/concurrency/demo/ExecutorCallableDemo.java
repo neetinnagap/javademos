@@ -7,17 +7,17 @@ public class ExecutorCallableDemo {
     public static void main(String args[]){
         ExecutorService executor = Executors.newFixedThreadPool(1);
         Callable<Integer> task = () -> {
-            System.out.println("Inside callable");
+            System.out.println(Thread.currentThread().getName() + ": Inside callable");
             TimeUnit.SECONDS.sleep(5);
             return 1;
         };
         Future<Integer> future = executor.submit(task);
 
-        System.out.println("is done: " + future.isDone());
+        System.out.println(Thread.currentThread().getName() + ": is done: " + future.isDone());
 
         try {
             Integer value = future.get();
-            System.out.println(value);
+            System.out.println(Thread.currentThread().getName() + ": " + value);
         } catch (InterruptedException | ExecutionException e) {
             e.printStackTrace();
         }

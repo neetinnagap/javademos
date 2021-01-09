@@ -91,10 +91,10 @@ public class StreamsDemo {
 //        demo.regularMinDemo();
 //        demo.streamsMinDemo();
 //        demo.streamsMinDemoOptimized();
-//        demo.regularMin3Demo();
+        demo.regularMin3Demo();
 //        demo.streamsMin3Demo();
 //        demo.streamsWitObjects();
-        demo.collectedStreams();
-        demo.collectedSortedStreams();
+//        demo.collectedStreams();
+//        demo.collectedSortedStreams();
     }
 }
