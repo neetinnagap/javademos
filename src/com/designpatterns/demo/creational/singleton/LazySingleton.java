@@ -1,6 +1,5 @@
-package com.designpatterns.demo;
+package com.designpatterns.demo.creational.singleton;
 
-import javax.management.InstanceNotFoundException;
 import java.util.Objects;
 
 public class LazySingleton {

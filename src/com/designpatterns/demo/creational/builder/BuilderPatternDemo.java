@@ -1,4 +1,4 @@
-package com.designpatterns.demo;
+package com.designpatterns.demo.creational.builder;
 
 public class BuilderPatternDemo {
 

@@ -1,4 +1,4 @@
-package com.designpatterns.demo;
+package com.designpatterns.demo.creational.singleton;
 
 public class EagerSingleton {
     private static EagerSingleton INSTANCE = new EagerSingleton();
